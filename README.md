@@ -323,3 +323,5 @@ export default async function getDiscordMessage(req: NextApiRequest, res: NextAp
 ### Demo
 
 The demo is available at https://demo.vercel.events. The data recorded or used on the demo may be removed by Vercel at any point.
+
+DATO CMS ADMIN PANEL - https://virtual-event-starter-kit-9927.admin.datocms.com/editor/item_types/1286002/items
