@@ -17,7 +17,8 @@
 import { useState, useRef, useEffect } from 'react';
 import cn from 'classnames';
 import { SITE_URL, TWEET_TEXT } from '@lib/constants';
-import IconTwitter from './icons/icon-twitter';
+// import IconTwitter from './icons/icon-twitter';
+import IconInstagram from './icons/icon-instagram';
 import IconLinkedin from './icons/icon-linkedin';
 import IconDownload from './icons/icon-download';
 import LoadingDots from './loading-dots';
@@ -33,8 +34,7 @@ export default function TicketActions({ username }: Props) {
   const [loading, setLoading] = useState(false);
   const downloadLink = useRef<HTMLAnchorElement>();
   const permalink = encodeURIComponent(`${SITE_URL}/tickets/${username}`);
-  const text = encodeURIComponent(TWEET_TEXT);
-  const tweetUrl = `https://twitter.com/intent/tweet?url=${permalink}&via=vercel&text=${text}`;
+  const igUrl = 'https://www.instagram.com/plutokyd/';
   const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${permalink}`;
   const downloadUrl = `/api/ticket-images/${username}`;
 
@@ -58,11 +58,11 @@ export default function TicketActions({ username }: Props) {
     <>
       <a
         className={cn(styles.button, styleUtils.appear, styles.first, 'icon-button')}
-        href={tweetUrl}
+        href={igUrl}
         rel="noopener noreferrer"
         target="_blank"
       >
-        <IconTwitter width={24} /> See Instagram
+        <IconInstagram width={24} /> See Instagram
       </a>
       <a
         className={cn(

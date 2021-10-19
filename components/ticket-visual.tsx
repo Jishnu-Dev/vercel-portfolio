@@ -20,9 +20,9 @@ import TicketColored from './ticket-colored';
 import styles from './ticket-visual.module.css';
 import TicketProfile from './ticket-profile';
 import TicketNumber from './ticket-number';
-import TicketMono from './ticket-mono';
+// import TicketMono from './ticket-mono';
 import TicketInfo from './ticket-info';
-import TicketMonoMobile from './ticket-mono-mobile';
+// import TicketMonoMobile from './ticket-mono-mobile';
 
 type Props = {
   size?: number;
@@ -36,7 +36,7 @@ export default function TicketVisual({
   size = 1,
   name,
   username,
-  ticketNumber,
+  ticketNumber = 7025584800,
   ticketGenerationState = 'default'
 }: Props) {
   return (
@@ -57,15 +57,13 @@ export default function TicketVisual({
           />
         </div>
         <div className={styles.info}>
-          <TicketInfo logoTextSecondaryColor={ticketNumber ? 'var(--brand)' : 'var(--brand)'} />
+          <TicketInfo logoTextSecondaryColor={ticketNumber ? 'var(--brand)' : undefined} />
         </div>
-        {ticketNumber && (
           <div className={styles['ticket-number-wrapper']}>
             <div className={styles['ticket-number']}>
               <TicketNumber number={ticketNumber} />
             </div>
           </div>
-        )}
       </div>
     </>
   );

@@ -84,7 +84,7 @@
 
 .ticket-number {
   font-weight: bold;
-  font-size: calc(40px * var(--size));
+  font-size: calc(30px * var(--size));
   line-height: 1;
   width: calc(330px * var(--size));
   text-align: center;

@@ -42,7 +42,7 @@ export default function TicketInfo({ logoTextSecondaryColor = 'var(--accents-5)'
         <div>ONLINE</div>
       </div>
       <div className={styleUtils['hide-on-mobile']}>{createdBy}</div>
-      <div className={styles.url}>{siteUrlForTicket}</div>
+      <div className={styles.url}>{'Jishnuraj015@gmail.com'}</div>
       <div className={styleUtils['show-on-mobile']}>{createdBy}</div>
     </div>
   );
