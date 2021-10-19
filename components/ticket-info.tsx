@@ -20,13 +20,13 @@ import Logo from './logo';
 import { DATE, SITE_URL } from '@lib/constants';
 import VercelLogo from '@components/icons/icon-platform';
 
-const siteUrl = new URL(SITE_URL);
-const siteUrlForTicket = `${siteUrl.host}${siteUrl.pathname}`.replace(/\/$/, '');
+// const siteUrl = new URL(SITE_URL);
+// const siteUrlForTicket = `${siteUrl.host}${siteUrl.pathname}`.replace(/\/$/, '');
 
 export default function TicketInfo({ logoTextSecondaryColor = 'var(--accents-5)' }) {
   const createdBy = (
     <div className={styles['created-by']}>
-      <div className={styles['created-by-text']}>Created by </div>
+      <div className={styles['created-by-text']}>Thanks to </div>
       <div className={styles['created-by-logo']}>
         <VercelLogo height="100%" color="var(--accents-4)" />
       </div>

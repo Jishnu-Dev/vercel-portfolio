@@ -17,7 +17,7 @@
 import cn from 'classnames';
 import styleUtils from './utils.module.css';
 import styles from './hero.module.css';
-import { BRAND_NAME, DATE, SITE_DESCRIPTION } from '@lib/constants';
+import { BRAND_NAME, LATEST_BUILD, SITE_DESCRIPTION } from '@lib/constants';
 
 export default function Hero() {
   return (
@@ -47,10 +47,15 @@ export default function Hero() {
         {SITE_DESCRIPTION}
       </h2>
       <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.info)}>
-        <p>{DATE}</p>
+        <p><strong>My LATEST BUILD</strong></p>
         <div className={styles['description-separator']} />
         <p>
-          <strong>Kerala</strong>
+        <a 
+          href={LATEST_BUILD}
+          className={styles['hero-link']}
+          target="_blank">
+          <strong>{'QuoteMe ->'}</strong>
+          </a>
         </p>
       </div>
     </div>
