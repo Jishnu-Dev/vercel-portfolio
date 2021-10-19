@@ -89,8 +89,8 @@
 .tab {
   text-transform: uppercase;
   padding: var(--space-4x);
-  font-size: 14px;
-  color: var(--secondary-color);
+  font-size: 20px;
+  color: #fff;
   font-weight: 700;
   letter-spacing: -0.05em;
   height: 100%;
@@ -102,7 +102,7 @@
 .tab:hover,
 .tab:focus,
 .tab:active {
-  color: #fff;
+  color: var(--brand);
 }
 
 .tab-active {
