@@ -62,7 +62,7 @@ export default function TicketActions({ username }: Props) {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <IconTwitter width={24} /> Tweet it!
+        <IconTwitter width={24} /> See Instagram
       </a>
       <a
         className={cn(
@@ -98,7 +98,7 @@ export default function TicketActions({ username }: Props) {
           <LoadingDots size={4} />
         ) : (
           <>
-            <IconDownload width={24} /> Download
+            <IconDownload width={24} /> Download CV
           </>
         )}
       </a>

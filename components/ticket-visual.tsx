@@ -43,10 +43,10 @@ export default function TicketVisual({
     <>
       <div className={styles.visual} style={{ ['--size' as string]: size }}>
         <div className={styles['horizontal-ticket']}>
-          {username ? <TicketColored /> : <TicketMono />}
+          {username ? <TicketColored /> : <TicketColored />}
         </div>
         <div className={styles['vertical-ticket']}>
-          {username ? <TicketColoredMobile /> : <TicketMonoMobile />}
+          {username ? <TicketColoredMobile /> : <TicketColoredMobile />}
         </div>
         <div className={styles.profile}>
           <TicketProfile
@@ -57,7 +57,7 @@ export default function TicketVisual({
           />
         </div>
         <div className={styles.info}>
-          <TicketInfo logoTextSecondaryColor={ticketNumber ? 'var(--brand)' : undefined} />
+          <TicketInfo logoTextSecondaryColor={ticketNumber ? 'var(--brand)' : 'var(--brand)'} />
         </div>
         {ticketNumber && (
           <div className={styles['ticket-number-wrapper']}>
