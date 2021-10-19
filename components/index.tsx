@@ -20,7 +20,7 @@ import Ticket from './ticket';
 import Layout from './layout';
 import ConfContainer from './conf-container';
 import Hero from './hero';
-// import Form from './form';
+import Form from './form';
 import LearnMore from './learn-more';
 
 type Props = {
@@ -50,7 +50,7 @@ export default function Conf({
           {pageState === 'registration' && !sharePage ? (
             <>
               <Hero />
-              {/* <Form /> */}
+              <Form />
               <LearnMore />
             </>
           ) : (
@@ -61,12 +61,6 @@ export default function Conf({
               sharePage={sharePage}
             />
           )}
-          <Ticket
-              username={userData.username}
-              name={userData.name}
-              ticketNumber={userData.ticketNumber}
-              sharePage={sharePage}
-            />
         </ConfContainer>
       </Layout>
     </ConfDataContext.Provider>

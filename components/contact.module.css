@@ -28,3 +28,16 @@
   text-decoration: underline;
   color: #fff;
 }
+
+/* Styles by Jishnu Raj */
+.hero-lead {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .hero-lead {
+    max-width: 60vw;
+  }
+}

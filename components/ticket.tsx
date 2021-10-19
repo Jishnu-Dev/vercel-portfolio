@@ -49,7 +49,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
       Tilt.init(ticketRef.current, {
         glare: true,
         max: 5,
-        'max-glare': 0.16,
+        'max-glare': 0.50,
         'full-page-listening': true
       });
     }
