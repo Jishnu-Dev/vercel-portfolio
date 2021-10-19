@@ -25,7 +25,7 @@ import IconDownload from './icons/icon-download';
 import LoadingDots from './loading-dots';
 import styleUtils from './utils.module.css';
 import styles from './ticket-actions.module.css';
-import GithubIcon from '@components/icons/icon-github';
+// import GithubIcon from '@components/icons/icon-github';
 
 type Props = {
   username: string;
@@ -96,7 +96,7 @@ export default function TicketActions({ username }: Props) {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <IconInstagram width={24} /> See Instagram
+        <IconInstagram width={24} /> Instagram Profile
       </a>
     </>
   );

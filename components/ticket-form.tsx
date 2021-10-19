@@ -17,7 +17,7 @@
 import { useState, useRef } from 'react';
 // import { scrollTo } from '@lib/smooth-scroll';
 import cn from 'classnames';
-import GithubIcon from '@components/icons/icon-github';
+// import GithubIcon from '@components/icons/icon-github';
 import CheckIcon from '@components/icons/icon-check';
 import { REPO, SITE_ORIGIN, TicketGenerationState } from '@lib/constants';
 // import isMobileOrTablet from '@lib/is-mobile-or-tablet';
@@ -27,6 +27,7 @@ import formStyles from './form.module.css';
 import ticketFormStyles from './ticket-form.module.css';
 import { saveGithubToken } from '@lib/user-api';
 import { GitHubOAuthData } from '@lib/types';
+import IconDownload from './icons/icon-download';
 
 type FormState = 'default' | 'loading' | 'error';
 
@@ -164,45 +165,46 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
     >
       <div className={cn(formStyles['form-row'], ticketFormStyles['form-row'])}>
         <a 
-          href={REPO}
+          href={'/cv/Jishnu Raj CV.pdf'}
           target="_blank">
-        <button
-          type="button"
-          className={cn(
-            formStyles.submit,
-            formStyles['generate-with-github'],
-            formStyles[formState],
-            {
-              [formStyles['not-allowed']]: !githubEnabled
-            }
-          )}
-          // disabled={
-          //   !process.env.NEXT_PUBLIC_GITHUB_OAUTH_CLIENT_ID ||
-          //   formState === 'loading' ||
-          //   Boolean(username)
-          // }
-          // onClick={() => {
-          //   if (formRef && formRef.current && isMobileOrTablet()) {
-          //     scrollTo(formRef.current, formRef.current.offsetHeight);
-          //   }
-          // }}
-        >
-          <div className={ticketFormStyles.generateWithGithub}>
-            <span className={ticketFormStyles.githubIcon}>
-              <GithubIcon color="#fff" size={24} />
-            </span>
-            {formState === 'loading' ? (
-              <LoadingDots size={4} />
-            ) : (
-              username || 'See GitHub Profile'
+          <button
+            type="button"
+            className={cn(
+              formStyles.submit,
+              formStyles['generate-with-github'],
+              formStyles[formState],
+              {
+                [formStyles['not-allowed']]: !githubEnabled
+              }
             )}
-          </div>
-          {username ? (
-            <span className={ticketFormStyles.checkIcon}>
-              <CheckIcon color="#fff" size={24} />
-            </span>
-          ) : null}
-        </button>
+            // disabled={
+            //   !process.env.NEXT_PUBLIC_GITHUB_OAUTH_CLIENT_ID ||
+            //   formState === 'loading' ||
+            //   Boolean(username)
+            // }
+            // onClick={() => {
+            //   if (formRef && formRef.current && isMobileOrTablet()) {
+            //     scrollTo(formRef.current, formRef.current.offsetHeight);
+            //   }
+            // }}
+          >
+            <div className={ticketFormStyles.generateWithGithub}>
+              <span className={ticketFormStyles.githubIcon}>
+                {/* <GithubIcon color="#fff" size={24} /> */}
+                <IconDownload width={24} />
+              </span>
+              {formState === 'loading' ? (
+                <LoadingDots size={4} />
+              ) : (
+                username || 'Download Resume'
+              )}
+            </div>
+            {username ? (
+              <span className={ticketFormStyles.checkIcon}>
+                <CheckIcon color="#fff" size={24} />
+              </span>
+            ) : null}
+          </button>
         </a>
         <p className={ticketFormStyles.description}>
           GitHub profile
