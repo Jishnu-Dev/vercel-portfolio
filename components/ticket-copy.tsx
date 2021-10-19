@@ -32,7 +32,7 @@ export default function TicketCopy({ username }: Props) {
   const [copied, setCopied] = useState(false);
   const scrollRef = useRef<HTMLSpanElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const url = `${SITE_URL}/tickets/${username}`;
+  const url = SITE_URL;
   useEffect(() => {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       setCopyEnabled(true);
@@ -70,7 +70,7 @@ export default function TicketCopy({ username }: Props) {
   return (
     <div className={cn(styles.wrapper, styleUtils.appear)}>
       <div className={styles['label-wrapper']}>
-        <div className={styles.label}>Your ticket URL:</div>
+        <div className={styles.label}>Copy portfolio's URL:</div>
         <div
           className={cn(styles['mobile-copy'], {
             [styles['mobile-copy-disabled']]: !copyEnabled

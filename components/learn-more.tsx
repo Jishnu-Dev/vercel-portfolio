@@ -23,8 +23,7 @@ export default function LearnMore() {
   return (
     <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.contact)}>
       <p className={styles['hero-lead']}>I’m a web developer specialized in building front end coponents and web pages (and occasionally some backend works too). Currently, I love to explore every technology stack. I was working with nuxt and vue and currently I'm learning React Js with Next.</p>
-      Check out my{' '}
-      <a href={REPO} className={styles['contact-email']} target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+      {/* Check out my{' '}<a href={REPO} className={styles['contact-email']} target="_blank" rel="noopener noreferrer">GitHub Profile</a> */}
     </div>
   );
 }

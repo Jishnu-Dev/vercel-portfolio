@@ -15,12 +15,12 @@
  */
 
 import { useState, useRef } from 'react';
-import { scrollTo } from '@lib/smooth-scroll';
+// import { scrollTo } from '@lib/smooth-scroll';
 import cn from 'classnames';
 import GithubIcon from '@components/icons/icon-github';
 import CheckIcon from '@components/icons/icon-check';
 import { REPO, SITE_ORIGIN, TicketGenerationState } from '@lib/constants';
-import isMobileOrTablet from '@lib/is-mobile-or-tablet';
+// import isMobileOrTablet from '@lib/is-mobile-or-tablet';
 import useConfData from '@lib/hooks/use-conf-data';
 import LoadingDots from './loading-dots';
 import formStyles from './form.module.css';
@@ -163,8 +163,11 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
       }}
     >
       <div className={cn(formStyles['form-row'], ticketFormStyles['form-row'])}>
+        <a 
+          href={REPO}
+          target="_blank">
         <button
-          type="submit"
+          type="button"
           className={cn(
             formStyles.submit,
             formStyles['generate-with-github'],
@@ -173,16 +176,16 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
               [formStyles['not-allowed']]: !githubEnabled
             }
           )}
-          disabled={
-            !process.env.NEXT_PUBLIC_GITHUB_OAUTH_CLIENT_ID ||
-            formState === 'loading' ||
-            Boolean(username)
-          }
-          onClick={() => {
-            if (formRef && formRef.current && isMobileOrTablet()) {
-              scrollTo(formRef.current, formRef.current.offsetHeight);
-            }
-          }}
+          // disabled={
+          //   !process.env.NEXT_PUBLIC_GITHUB_OAUTH_CLIENT_ID ||
+          //   formState === 'loading' ||
+          //   Boolean(username)
+          // }
+          // onClick={() => {
+          //   if (formRef && formRef.current && isMobileOrTablet()) {
+          //     scrollTo(formRef.current, formRef.current.offsetHeight);
+          //   }
+          // }}
         >
           <div className={ticketFormStyles.generateWithGithub}>
             <span className={ticketFormStyles.githubIcon}>
@@ -191,7 +194,7 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
             {formState === 'loading' ? (
               <LoadingDots size={4} />
             ) : (
-              username || 'Generate with GitHub'
+              username || 'See GitHub Profile'
             )}
           </div>
           {username ? (
@@ -200,8 +203,10 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
             </span>
           ) : null}
         </button>
+        </a>
         <p className={ticketFormStyles.description}>
-          {githubEnabled ? (
+          GitHub profile
+          {/* {githubEnabled ? (
             'Only public info will be used.'
           ) : (
             <>
@@ -215,7 +220,7 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
                 Learn more.
               </a>
             </>
-          )}
+          )} */}
         </p>
       </div>
     </form>
