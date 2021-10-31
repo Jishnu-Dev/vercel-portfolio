@@ -33,18 +33,17 @@ export const LATEST_BUILD = 'http://quote-me.vercel.app/';
 export const LEGAL_URL = process.env.NEXT_PUBLIC_PRIVACY_POLICY_URL;
 export const COPYRIGHT_HOLDER = 'Jishnu Raj';
 
-export const CODE_OF_CONDUCT =
-  'https://www.notion.so/vercel/Code-of-Conduct-Example-7ddd8d0e9c354bb597a0faed87310a78';
+export const CODE_OF_CONDUCT = 'https://www.notion.so/vercel/Code-of-Conduct-Example-7ddd8d0e9c354bb597a0faed87310a78';
 export const REPO = 'https://github.com/Jishnu-Dev/vercel-portfolio';
 export const SAMPLE_TICKET_NUMBER = 100;
 export const NAVIGATION = [
   {
-    name: 'About Me',
-    route: '/stage/a'
+    name: 'Home',
+    route: '/'
   },
   {
     name: 'Experience',
-    route: '/stage/c'
+    route: '/experiences'
   },
   {
     name: 'Education',

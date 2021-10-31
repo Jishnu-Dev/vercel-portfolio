@@ -30,7 +30,7 @@ export default function SchedulePage() {
     <Page meta={meta}>
       <Layout>
         <div className={styles.schoolrow}>
-        <Header hero="EDUCATION" description={`I'm still a student. I keep learning each day. But here is my academic career.`} />
+        <Header hero="EDUCATION" description={`I keep learning each day and it never stops. But here is my academic career.`} />
         <Education />
         </div>
       </Layout>
