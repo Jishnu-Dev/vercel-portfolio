@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 export const SITE_URL = 'https://jishnu-raj-portfolio.vercel.app/';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
 export const TWITTER_USER_NAME = 'vercel';
 export const BRAND_NAME = 'Jishnu Raj';
 export const SITE_NAME_MULTILINE = ['Jishnu', 'Raj'];
 export const SITE_NAME = 'ACME Conf';
-export const META_DESCRIPTION = 'This is an open source demo that Next.js developers can clone, deploy, and fully customize for events. Created through collaboration of marketers, designers, and developers at Vercel.';
+export const META_DESCRIPTION = 'Jishnu Raj Developer Portfolio';
 export const SITE_DESCRIPTION = 'Jishnu Raj | Portfolio';
 export const DATE = 'Thodupuzha';
 export const SHORT_DATE = 'Oct 27 - 9:00am PST';
 export const FULL_DATE = 'Oct 27th 9am Pacific Time (GMT-7)';
 export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
-export const LATEST_BUILD = 'http://quote-me.vercel.app/'
+export const LATEST_BUILD = 'http://quote-me.vercel.app/';
+
+
+// Education page
+export const EducationLead = 'Jishnu Raj Developer Portfolio education';
+export const HighSchool = 'Vimala Matha HSS';
+
+export const HigherSecondary = 'MKNM HSS';
+export const Graduation = 'Santhigiri College of Sciences and Management';
 
 // Remove process.env.NEXT_PUBLIC_... below and replace them with
 // strings containing your own privacy policy URL and copyright holder name
@@ -37,26 +44,26 @@ export const COPYRIGHT_HOLDER = 'Jishnu Raj';
 export const CODE_OF_CONDUCT =
   'https://www.notion.so/vercel/Code-of-Conduct-Example-7ddd8d0e9c354bb597a0faed87310a78';
 export const REPO = 'https://github.com/Jishnu-Dev/vercel-portfolio';
-export const SAMPLE_TICKET_NUMBER = 1234;
+export const SAMPLE_TICKET_NUMBER = 100;
 export const NAVIGATION = [
   {
     name: 'About Me',
     route: '/stage/a'
   },
   {
-    name: 'Education',
+    name: 'Experience',
     route: '/stage/c'
   },
   {
-    name: 'Experience',
-    route: '/stage/m'
+    name: 'Education',
+    route: '/education'
   },
   {
-    name: 'Hobbies',
+    name: 'Bio',
     route: '/stage/e'
   },
   {
-    name: 'Contact',
+    name: 'Hobbies',
     route: '/schedule'
   },
   {

@@ -47,7 +47,7 @@ export default function Hero() {
         {SITE_DESCRIPTION}
       </h2>
       <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.info)}>
-        <p><strong>My LATEST BUILD</strong></p>
+        <p className={cn(styles.secondarygradient)}><strong>My LATEST BUILD</strong></p>
         <div className={styles['description-separator']} />
         <p>
         <a 
