@@ -34,7 +34,7 @@ export default function Hero() {
       </h2>
       <h2 className={cn(styleUtils.appear, styleUtils['appear-third'], styles.hero, styles.herotitle)}>
         Hi, I'm {BRAND_NAME}.
-        <br className={styleUtils['show-on-desktop']} />I'm A Frontend Developer
+        <br className={styleUtils['show-on-desktop']} />I'm A Web Developer
       </h2>
       <h2
         className={cn(

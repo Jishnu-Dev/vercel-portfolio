@@ -15,46 +15,7 @@
  */
 
 import cn from 'classnames';
-import { Stage, Talk } from '@lib/types';
 import styles from './schedule.module.css';
-import TalkCard from './talk-card';
-
-import { EducationLead, HighSchool  } from '@lib/constants';
-
-// function SchoolRow({ school }: { school: Stage }) {
-//   // Group talks by the time block
-//   const timeBlocks = stage.schedule.reduce((allBlocks: any, talk) => {
-//     allBlocks[talk.start] = [...(allBlocks[talk.start] || []), talk];
-//     return allBlocks;
-//   }, {});
-
-//   const SchoolList =
-//   [ 
-//     {  
-//       id: 1,
-//       school: 'Vimala Matha HSS',
-//       place: 'Kadhalikkad'
-//     } 
-//   ];
-
-//   return (
-    
-//     <div key={school.name} className={styles.row}>
-//       {/* <h3 className={cn(styles['stage-name'], styles[stage.slug])}>
-//         <span>{'Graduation'}</span>
-//       </h3> */}
-//       <div className={cn(styles.talks, styles[stage.slug])}>
-//         {Object.keys(timeBlocks).map((startTime: string) => (
-//           <div key={startTime}>
-//             {timeBlocks[startTime].map((talk: Talk, index: number) => (
-//               <TalkCard key={talk.title} talk={talk} showTime={index === 0} />
-//             ))}
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
 
 const Education = () => {
 
@@ -62,50 +23,44 @@ const Education = () => {
     [ 
       {  
         id: 1,
-        name: 'Vimala Matha HSS',
-        place: 'Kadhalikkad',
-        year: 20000
+        name: 'Graduation',
+        stream: 'Bachelor of Computer Application',
+        school: 'Santhigiri College of Sciences and Management',
+        place: 'Vazhithala',
+        year: 2020
       }, 
       {  
         id: 2,
-        name: 'Vimala Matha HSS',
-        place: 'Kadhalikkad',
-        year: 20000
+        name: 'Higher Secondary',
+        stream: 'Computer Science',
+        school: 'MKNM HSS Kumaramangalam',
+        place: 'Kumaramangalam',
+        year: 2017
       },
       {  
         id: 3,
-        name: 'Vimala Matha HSS',
-        place: 'Kadhalikkad',
-        year: 20000
+        name: 'High School',
+        stream: 'Kerala State Syllabus',
+        school: 'Vimala Matha HSS',
+        place: 'Kadhalikad',
+        year: 2015
       } 
     ];
 
   return (
-    <div style={{color: 'red'}} className={styles.container}>
-      <div className={styles['row-wrapper']}>
-        {schoolList.map(school => (
-              <div key={school.id} className={styles.row}>
-              <h3 className={cn(styles['stage-name'])}>
-                <span>{'Graduation'}</span>
-              </h3>
-                <p>Year: { school.year }</p>
-              <p>{ school.place }</p>
-
-              {/* <div className={cn(styles.talks, styles[stage.slug])}>
-                {Object.keys(timeBlocks).map((startTime: string) => (
-                  <div key={startTime}>
-                    {timeBlocks[startTime].map((talk: Talk, index: number) => (
-                      <TalkCard key={talk.title} talk={talk} showTime={index === 0} />
-                    ))}
-                  </div>
-                ))}
-              </div> */}
-            </div>
-        ))}
-      </div>
+    <div className={styles['row-wrapper']}>
+      {schoolList.map(school => (
+            <div key={school.id} className={styles.row}>
+            <h3 className={cn(styles['stage-name'])}>
+              <span>{school.name}</span>
+            </h3>
+            <h3 style={{marginBottom: '2rem'}}>{ school.stream }</h3>
+            <p style={{margin: '0'}}><strong>Institution:</strong> { school.school }</p>
+            <p style={{margin: '0'}}><strong>Year:</strong> { school.year }</p>
+            <p style={{margin: '0'}}><strong>Place:</strong> { school.place }</p>
+          </div>
+      ))}
     </div>
   );
 }
-
-
 export default Education;

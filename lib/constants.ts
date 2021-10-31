@@ -28,14 +28,6 @@ export const TWEET_TEXT = META_DESCRIPTION;
 export const COOKIE = 'user-id';
 export const LATEST_BUILD = 'http://quote-me.vercel.app/';
 
-
-// Education page
-export const EducationLead = 'Jishnu Raj Developer Portfolio education';
-export const HighSchool = 'Vimala Matha HSS';
-
-export const HigherSecondary = 'MKNM HSS';
-export const Graduation = 'Santhigiri College of Sciences and Management';
-
 // Remove process.env.NEXT_PUBLIC_... below and replace them with
 // strings containing your own privacy policy URL and copyright holder name
 export const LEGAL_URL = process.env.NEXT_PUBLIC_PRIVACY_POLICY_URL;

@@ -14,50 +14,26 @@
  * limitations under the License.
  */
 
-import { GetStaticProps } from 'next';
-
 import Page from '@components/page';
 import Education from '@components/school';
 import Layout from '@components/layout';
 import Header from '@components/header';
+import styles from '@components/schedule.module.css';
 
-import { getAllStages } from '@lib/cms-api';
-import { Stage } from '@lib/types';
-import { EducationLead } from '@lib/constants';
-
-
-type Props = {
-  allStages: Stage[];
-};
-
-export default function SchedulePage({ allStages }: Props) {
+export default function SchedulePage() {
   const meta = {
     title: 'Jishnu Raj | Education',
-    description: EducationLead
+    description: null
   };
-
-  console.log(allStages);
-  
 
   return (
     <Page meta={meta}>
       <Layout>
-        <div>
-        <Header hero="EDUCATION" description={meta.description} />
+        <div className={styles.schoolrow}>
+        <Header hero="EDUCATION" description={`I'm still a student. I keep learning each day. But here is my academic career.`} />
         <Education />
         </div>
       </Layout>
     </Page>
   );
 }
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const allStages = await getAllStages();
-
-  return {
-    props: {
-      allStages
-    },
-    revalidate: 60
-  };
-};
