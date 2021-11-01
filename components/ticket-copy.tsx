@@ -70,7 +70,7 @@ export default function TicketCopy({ username }: Props) {
   return (
     <div className={cn(styles.wrapper, styleUtils.appear)}>
       <div className={styles['label-wrapper']}>
-        <div className={styles.label}>Copy portfolio's URL:</div>
+        <div className={styles.label}>Copy this portfolio's URL:</div>
         <div
           className={cn(styles['mobile-copy'], {
             [styles['mobile-copy-disabled']]: !copyEnabled

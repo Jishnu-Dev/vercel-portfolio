@@ -26,10 +26,10 @@ import VercelLogo from '@components/icons/icon-platform';
 export default function TicketInfo({ logoTextSecondaryColor = 'var(--accents-5)' }) {
   const createdBy = (
     <div className={styles['created-by']}>
-      <div className={styles['created-by-text']}>Thanks to </div>
-      <div className={styles['created-by-logo']}>
+      <div className={styles['created-by-text']}>Reach me via </div>
+      {/* <div className={styles['created-by-logo']}>
         <VercelLogo height="100%" color="var(--accents-4)" />
-      </div>
+      </div> */}
     </div>
   );
   return (
