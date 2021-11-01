@@ -17,22 +17,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import cn from 'classnames';
-import GithubIcon from '@components/icons/icon-github';
-import { Speaker } from '@lib/types';
 import styles from './speaker-section.module.css';
-
-const TwitterIcon = () => (
-  <svg width={24} viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M23.643 4.93695C22.808 5.30695 21.911 5.55695 20.968 5.66995C21.93 5.09395 22.668 4.17995 23.016 3.09195C22.116 3.62595 21.119 4.01395 20.058 4.22195C19.208 3.31795 17.998 2.75195 16.658 2.75195C14.086 2.75195 12 4.83795 12 7.41195C12 7.77595 12.042 8.12995 12.12 8.47195C8.24701 8.27695 4.81601 6.42195 2.51801 3.60395C2.11801 4.29395 1.88801 5.09395 1.88801 5.94595C1.88801 7.56195 2.71101 8.98895 3.96001 9.82395C3.19601 9.79895 2.47801 9.58995 1.85001 9.24095V9.30095C1.85001 11.558 3.45501 13.441 5.58701 13.869C5.19501 13.975 4.78401 14.031 4.36001 14.031C4.06001 14.031 3.76701 14.003 3.48301 13.949C4.07601 15.799 5.79601 17.147 7.83501 17.183C6.24001 18.433 4.23101 19.178 2.04901 19.178C1.67301 19.178 1.30201 19.156 0.937012 19.113C2.99901 20.436 5.44701 21.206 8.07701 21.206C16.647 21.206 21.332 14.108 21.332 7.95195C21.332 7.75195 21.327 7.54995 21.318 7.34995C22.228 6.69195 23.018 5.87295 23.641 4.93995L23.643 4.93695Z"
-      fill="#D8D8D8"
-    />
-  </svg>
-);
-
-// type Props = {
-//   speaker: Speaker;
-// };
 
 export default function Experience() {
 
@@ -40,36 +25,24 @@ export default function Experience() {
     { 
       id: 1,
       name: 'Web Developer',
-      title: 'Web Devealoper',
-      year: '2020',
-      company: 'Global Invisions',
-      bio: 'asasas',
-      place: 'Kochi',
-      companyImage: 'https://www.giconsulting.com/assets/c93c07-d7ed2d1b6fb4cbeac1f544e27f3468db4c165056190a6552024b3b892a81abeb.jpg',
-      talk: {
-        title: 'ds',
-        description: 'df'
-      }
+      shortName: 'GI',
+      company: 'Global Invisions | Kochi',
+      bio: 'As a web developer, My major responsibilities at GI were to develop user-facing pages and User Interface components. Also to Make the user experience better, and occasionally some backend works with PHP and Laravel.',
+      companyImage: 'https://www.giconsulting.com/assets/c93c07-d7ed2d1b6fb4cbeac1f544e27f3468db4c165056190a6552024b3b892a81abeb.jpg'
     },
     { 
-      id: 1,
-      name: 'Web Developer',
-      title: 'Web Devealoper',
-      year: '2020',
-      company: 'Global Invisions',
-      bio: 'asasas',
-      place: 'Kochi',
-      companyImage: 'https://www.giconsulting.com/assets/c93c07-d7ed2d1b6fb4cbeac1f544e27f3468db4c165056190a6552024b3b892a81abeb.jpg',
-      talk: {
-        title: 'ds',
-        description: 'df'
-      }
+      id: 2,
+      name: 'Intern',
+      shortName: 'Terasoft',
+      company: 'Terasoft | Thodupuzha',
+      bio: 'As an intern, I started my career as a developer at Terasoft with a four-month internship right after my graduation.',
+      companyImage: 'https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2340&q=80'
     }
   ]
 
   return (
     <>
-      <Link href="/speakers">
+      {/* <Link href="/speakers">
         <a className={styles.backlink}>
           <svg
             viewBox="0 0 24 24"
@@ -86,20 +59,20 @@ export default function Experience() {
           </svg>
           Back to speakers
         </a>
-      </Link>
+      </Link> */}
       {companyList.map(company => (
-        <div key={company.name}>
+        <div key={company.name} className={styles.experienceDiv}>
           <div className={styles.container}>
           <div style={{ minWidth: '300px' }}>
             <Image
-              alt={company.name}
-              title={company.name}
-              src={company.companyImage}
-              className={styles.image}
-              loading="lazy"
-              height={400}
-              width={300}
-            />
+            alt={company.name}
+            title={company.name}
+            src={company.companyImage}
+            className={styles.image}
+            loading="lazy"
+            height={400}
+            width={400}
+            /> 
           </div>
           <div className={styles['speaker-details']}>
             <div>
@@ -109,46 +82,34 @@ export default function Experience() {
                 @
                 <span className={styles.company}>{ ` ${company.company}`}</span>
               </p>
-              <h2 className={styles['bio-header']}>Bio</h2>
+              <h2 className={styles['bio-header']}>About</h2>
               <p className={styles.bio}>{company.bio}</p>
-              <h3 className={styles['socials-header']}>Social Media</h3>
-              {/* {company.twitter ? (
-                <a
-                  aria-label="Twitter"
-                  href={speaker.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <TwitterIcon />
-                </a>
-              ) : (
-                <span className={styles.disabled}>
-                  <TwitterIcon />
-                </span>
-              )} */}
-              {/* {company.github ? (
-                <a
-                  aria-label="GitHub"
-                  className={styles.githubIcon}
-                  href={company.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GithubIcon color="#D8D8D8" size={24} />
-                </a>
-              ) : (
-                <span className={cn(styles.githubIcon, styles.disabled)}>
-                  <GithubIcon color="#D8D8D8" size={24} />
-                </span>
-              )} */}
+              <h3 className={styles['socials-header']}>Tech stack used at {company.shortName}</h3>
+
+              { company.shortName == 'GI' ?
+                <div className={styles.techStackIcons}>
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/mac-os.png"/>
+                    <img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png"/>
+                    <img src="https://img.icons8.com/color/48/000000/gitlab.png"/>
+                    <img src="https://img.icons8.com/color/48/000000/vue-js.png"/>
+                    <img src="https://img.icons8.com/color/48/000000/npm.png"/>
+                    <img src="https://img.icons8.com/color/48/000000/bootstrap.png"/>
+                  <img src="https://img.icons8.com/color/48/000000/sass.png"/>
+                </div> : company.shortName == 'Terasoft' ? 
+                <div className={styles.techStackIcons}>
+                    <img src="https://img.icons8.com/color/48/000000/html-5.png"/>
+                    <img src="https://img.icons8.com/officel/48/000000/asp.png"/>
+                </div> : null
+              }
+
             </div>
           </div>
         </div>
       
-        <div className={styles['talk-details']}>
+        {/* <div className={styles['talk-details']}>
           <h3 className={styles['socials-header']}>{'sdfsdfsd'}</h3>
           <p>{'company.talk.description'}</p>
-        </div>
+        </div> */}
         </div>
       ))}
     </>

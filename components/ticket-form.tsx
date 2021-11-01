@@ -207,7 +207,6 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
           </button>
         </a>
         <p className={ticketFormStyles.description}>
-          GitHub profile
           {/* {githubEnabled ? (
             'Only public info will be used.'
           ) : (

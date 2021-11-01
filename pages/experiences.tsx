@@ -33,7 +33,7 @@ export default function SchedulePage() {
     <Page meta={meta}>
       <Layout>
         <div className={styles.schoolrow}>
-        <Header hero="EXPERIENCE" description={`I Believe mutual intrest is like chains of steel`} />
+        <Header hero="EXPERIENCE" description={`Honoured to work with amazing peoples since I started my career in 2020`} />
         <Experience />
         </div>
       </Layout>

@@ -127,3 +127,17 @@
 .githubIcon {
   margin-left: var(--space-2x);
 }
+
+/* Styles by me Jishnu Raj */
+.experienceDiv {
+  border-top: 1px solid var(--accents-7)
+}
+.experienceDiv img {
+  object-fit: cover !important;
+}
+.techStackIcons {
+  width: 100%;
+}
+.techStackIcons img {
+  margin-right: 12px;
+}
