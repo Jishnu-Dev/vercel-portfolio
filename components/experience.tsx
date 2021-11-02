@@ -76,7 +76,7 @@ export default function Experience() {
           </div>
           <div className={styles['speaker-details']}>
             <div>
-              <h1 className={styles.name}>{company.name}</h1>
+              <h1 className={styles.name} style={{color: 'var(--brand)'}}>{company.name}</h1>
               <p className={styles.title}>
                 {/* {`${company.title} @ `} */}
                 @

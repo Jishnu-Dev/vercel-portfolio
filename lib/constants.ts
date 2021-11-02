@@ -37,10 +37,10 @@ export const CODE_OF_CONDUCT = 'https://www.notion.so/vercel/Code-of-Conduct-Exa
 export const REPO = 'https://github.com/Jishnu-Dev/vercel-portfolio';
 export const SAMPLE_TICKET_NUMBER = 100;
 export const NAVIGATION = [
-  {
-    name: 'Home',
-    route: '/'
-  },
+  // {
+  //   name: 'Home',
+  //   route: '/'
+  // },
   {
     name: 'Experience',
     route: '/experiences'
@@ -50,25 +50,25 @@ export const NAVIGATION = [
     route: '/education'
   },
   {
-    name: 'Bio',
-    route: '/stage/e'
-  },
-  {
     name: 'Hobbies',
-    route: '/schedule'
+    route: '/hobbies'
   },
-  {
-    name: 'Speakers',
-    route: '/speakers'
-  },
-  {
-    name: 'Expo',
-    route: '/expo'
-  },
-  {
-    name: 'Other',
-    route: '/jobs'
-  }
+  // {
+  //   name: 'Hobbies',
+  //   route: '/schedule'
+  // },
+  // {
+  //   name: 'Speakers',
+  //   route: '/speakers'
+  // },
+  // {
+  //   name: 'Expo',
+  //   route: '/expo'
+  // },
+  // {
+  //   name: 'Other',
+  //   route: '/jobs'
+  // }
 ];
 
 export type TicketGenerationState = 'default' | 'loading';

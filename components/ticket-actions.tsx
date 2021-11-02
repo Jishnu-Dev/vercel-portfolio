@@ -78,7 +78,7 @@ export default function TicketActions({ username }: Props) {
           <LoadingDots size={4} />
         ) : (
           <>
-            <IconDownload width={24} /> Download CV
+            <IconDownload width={24} /> Read My Blog
           </>
         )}
       </a>
