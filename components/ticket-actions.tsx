@@ -20,6 +20,7 @@ import cn from 'classnames';
 // import IconTwitter from './icons/icon-twitter';
 import IconInstagram from './icons/icon-instagram';
 import IconGithubJis from './icons/icon-github-jis';
+import IconBlog from './icons/icon-blog';
 // import IconLinkedin from './icons/icon-linkedin';
 import IconDownload from './icons/icon-download';
 import LoadingDots from './loading-dots';
@@ -40,6 +41,7 @@ export default function TicketActions({ username }: Props) {
   const downloadUrl = `/api/ticket-images/${username}`;
   const instagramUrl = 'https://www.instagram.com/plutokyd/';
   const gitHubUrl = 'https://github.com/Jishnu-Dev'
+  const blogUrl = 'https://boringblog.hashnode.dev/dev-jishnu-my-favourite-vs-code-dark-themes'
 
   useEffect(() => {
     setImgReady(false);
@@ -59,29 +61,6 @@ export default function TicketActions({ username }: Props) {
 
   return (
     <>
-    <a
-        className={cn(styles.button, styleUtils.appear, styles.third, 'icon-button', {
-          [styles.loading]: loading
-        })}
-        href={loading ? undefined : downloadUrl}
-        onClick={e => {
-          if (imgReady) return;
-
-          e.preventDefault();
-          downloadLink.current = e.currentTarget;
-          // Wait for the image download to finish
-          setLoading(true);
-        }}
-        download="ticket.png"
-      >
-        {loading ? (
-          <LoadingDots size={4} />
-        ) : (
-          <>
-            <IconDownload width={24} /> Read My Blog
-          </>
-        )}
-      </a>
       <a
         className={cn(styles.button, styleUtils.appear, styles.first, 'icon-button')}
         href={gitHubUrl}
@@ -97,6 +76,22 @@ export default function TicketActions({ username }: Props) {
         target="_blank"
       >
         <IconInstagram width={24} /> Instagram Profile
+      </a>
+      <a
+        className={cn(styles.button, styleUtils.appear, styles.third, 'icon-button', {
+          [styles.loading]: loading
+        })}
+        href={loading ? undefined : blogUrl}
+        target={'_blank'}
+        download="ticket.png"
+      >
+        {loading ? (
+          <LoadingDots size={4} />
+        ) : (
+          <>
+            <IconBlog width={24} /> Read My Blog
+          </>
+        )}
       </a>
     </>
   );

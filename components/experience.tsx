@@ -42,28 +42,10 @@ export default function Experience() {
 
   return (
     <>
-      {/* <Link href="/speakers">
-        <a className={styles.backlink}>
-          <svg
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            fill="none"
-            shapeRendering="geometricPrecision"
-          >
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
-          Back to speakers
-        </a>
-      </Link> */}
       {companyList.map(company => (
         <div key={company.name} className={styles.experienceDiv}>
           <div className={styles.container}>
-          <div style={{ minWidth: '300px' }}>
+          <div className={styles['hover-zoom']} style={{ minWidth: '300px' }}>
             <Image
             alt={company.name}
             title={company.name}

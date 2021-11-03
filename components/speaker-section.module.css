@@ -175,3 +175,14 @@
   min-height: var(--space-4x);
   min-width: var(--space-4x);
 }
+
+.hover-zoom {
+  overflow: hidden;
+}
+.hover-zoom img {
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+.hover-zoom:hover img {
+  transform: scale(1.2);
+}

@@ -17,7 +17,6 @@
 import styles from './ticket-info.module.css';
 import styleUtils from './utils.module.css';
 import Logo from './logo';
-import { DATE, SITE_URL } from '@lib/constants';
 import VercelLogo from '@components/icons/icon-platform';
 
 // const siteUrl = new URL(SITE_URL);
@@ -26,10 +25,10 @@ import VercelLogo from '@components/icons/icon-platform';
 export default function TicketInfo({ logoTextSecondaryColor = 'var(--accents-5)' }) {
   const createdBy = (
     <div className={styles['created-by']}>
-      <div className={styles['created-by-text']}>Reach me via </div>
-      {/* <div className={styles['created-by-logo']}>
+      <div className={styles['created-by-text']}>Proudly hosted on </div>
+      <div className={styles['created-by-logo']}>
         <VercelLogo height="100%" color="var(--accents-4)" />
-      </div> */}
+      </div>
     </div>
   );
   return (
@@ -38,11 +37,11 @@ export default function TicketInfo({ logoTextSecondaryColor = 'var(--accents-5)'
         <Logo textSecondaryColor={logoTextSecondaryColor} />
       </div>
       <div className={styles.date}>
-        <div>{DATE}</div>
-        <div>Idukki</div>
+        <div>Thodupuzha,</div>
+        <div>Kerala</div>
       </div>
       <div className={styleUtils['hide-on-mobile']}>{createdBy}</div>
-      <div className={styles.url}>{'Jishnuraj015@gmail.com'}</div>
+      <div className={styles.url}>{'Jishnu.dev@gmail.com'}</div>
       <div className={styleUtils['show-on-mobile']}>{createdBy}</div>
     </div>
   );

@@ -78,7 +78,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               )
             ) : (
               <>
-                I build things<br />For the web
+                {`I'm a`} <br /> {`Web Dev,`} <br /> {`Ps artist &`} <br /> {`Motogrpher`}
               </>
             )}
           </h2>
@@ -89,7 +89,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               </>
             ) : (
               <>
-                Download my resume here and osme other long text here ...
+                Basically a techy by day and an artist by night
               </>
             )}
           </p>

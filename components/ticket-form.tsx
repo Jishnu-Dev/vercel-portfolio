@@ -17,8 +17,6 @@
 import { useState, useRef } from 'react';
 // import { scrollTo } from '@lib/smooth-scroll';
 import cn from 'classnames';
-// import GithubIcon from '@components/icons/icon-github';
-import CheckIcon from '@components/icons/icon-check';
 import { REPO, SITE_ORIGIN, TicketGenerationState } from '@lib/constants';
 // import isMobileOrTablet from '@lib/is-mobile-or-tablet';
 import useConfData from '@lib/hooks/use-conf-data';
@@ -199,11 +197,6 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
                 username || 'Download Resume'
               )}
             </div>
-            {username ? (
-              <span className={ticketFormStyles.checkIcon}>
-                <CheckIcon color="#fff" size={24} />
-              </span>
-            ) : null}
           </button>
         </a>
         <p className={ticketFormStyles.description}>

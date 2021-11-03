@@ -42,16 +42,16 @@ export const NAVIGATION = [
   //   route: '/'
   // },
   {
-    name: 'Experience',
+    name: 'Career',
     route: '/experiences'
+  },
+  {
+    name: 'Projects',
+    route: '/hobbies'
   },
   {
     name: 'Education',
     route: '/education'
-  },
-  {
-    name: 'Hobbies',
-    route: '/hobbies'
   },
   // {
   //   name: 'Hobbies',

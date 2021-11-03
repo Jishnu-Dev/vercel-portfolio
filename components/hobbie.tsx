@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
-import Link from 'next/link';
 import Image from 'next/image';
-import cn from 'classnames';
 import styles from './speaker-section.module.css';
 
 export default function Hobbie() {
@@ -48,9 +46,9 @@ export default function Hobbie() {
         {/* <h3 className={styles['socials-header']}>{'about'}</h3> */}
         <p> I found myself interested in multiple areas like tech, graphic design, and 
           I enjoy doing what makes me happy.<br />
-          ~ I enjoy photoshopping, motography.<br />
+          ~ I enjoy photoshopping, photography, videography.<br />
           ~ Loves to create small web apps and projects.<br />
-          ~ Loves to explore new technologies and learn them by trying them.<br />
+          ~ Passionate about coding and to explore new technologies and learn them by trying them.<br />
           ~ Loves to travel and explore destinations.
 
           <br />
@@ -62,8 +60,8 @@ export default function Hobbie() {
       {hobbyList.map(hobby => (
         <div key={hobby.name} className={styles.experienceDiv}>
           <div className={styles.container}>
-            <a href={hobby.link} target={'_blank'}>
-              <div style={{ minWidth: '300px' }}>
+            <a href={hobby.siteLink} target={'_blank'}>
+              <div className={styles['hover-zoom']} style={{ minWidth: '300px' }}>
                 <Image
                 alt={hobby.name}
                 title={hobby.name}
