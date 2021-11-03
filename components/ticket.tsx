@@ -78,7 +78,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               )
             ) : (
               <>
-                {`I'm a`} <br /> {`Web Dev,`} <br /> {`Ps artist &`} <br /> {`Motogrpher`}
+                {`I'm a`} <br /> {`Web Dev,`} <br /> {`Ps artist &`} <br /> {`Motographer`}
               </>
             )}
           </h2>

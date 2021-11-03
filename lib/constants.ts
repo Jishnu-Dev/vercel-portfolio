@@ -37,10 +37,10 @@ export const CODE_OF_CONDUCT = 'https://www.notion.so/vercel/Code-of-Conduct-Exa
 export const REPO = 'https://github.com/Jishnu-Dev/vercel-portfolio';
 export const SAMPLE_TICKET_NUMBER = 100;
 export const NAVIGATION = [
-  // {
-  //   name: 'Home',
-  //   route: '/'
-  // },
+  {
+    name: 'Home',
+    route: '/'
+  },
   {
     name: 'Career',
     route: '/experiences'

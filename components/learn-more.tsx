@@ -22,7 +22,7 @@ import { REPO } from '@lib/constants';
 export default function LearnMore() {
   return (
     <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.contact)}>
-      <p className={styles['hero-lead']}>I’m a web developer specialized in building front-end components and web pages (and occasionally some backend works too). I love to explore every technology stack learn new skills. After Nuxt Js and Vue Js, currently I'm learning React Js and Next Js.</p>
+      <p className={styles['hero-lead']}>I’m a web developer specialized in building front-end components and web pages (and occasionally some backend works too). I love to explore every technology stack and to learn new skills. After Nuxt Js and Vue Js, currently I'm learning React Js and Next Js which this portfolio is made of.</p>
       {/* Check out my{' '}<a href={REPO} className={styles['contact-email']} target="_blank" rel="noopener noreferrer">GitHub Profile</a> */}
     </div>
   );
