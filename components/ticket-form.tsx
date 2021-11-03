@@ -163,7 +163,7 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
     >
       <div className={cn(formStyles['form-row'], ticketFormStyles['form-row'])}>
         <a 
-          href={'/cv/Jishnu-Raj-CV.pdf'}
+          href={'https://github.com/Jishnu-Dev/ABOUT-ME/blob/main/Jishnu%20Raj%20CV.pdf'}
           target="_blank">
           <button
             type="button"
