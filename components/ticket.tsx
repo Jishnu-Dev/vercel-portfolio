@@ -78,7 +78,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               )
             ) : (
               <>
-                {`I'm a`} <br /> {`Web Dev,`} <br /> {`Ps artist &`} <br /> {`Motographer`}
+                {`I'm a`} <br /> {`Web Dev,`} <br /> {`and also a`} <br /> {`Self-taught`} <br />{'Digital artist'}
               </>
             )}
           </h2>
@@ -89,7 +89,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               </>
             ) : (
               <>
-                Basically a techy by day and an artist by night
+                {/* Basically a techy by day and an artist by night */}
               </>
             )}
           </p>

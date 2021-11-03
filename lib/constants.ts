@@ -17,7 +17,6 @@ export const SITE_URL = 'https://jishnu-raj-portfolio.vercel.app/';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
 export const TWITTER_USER_NAME = 'vercel';
 export const BRAND_NAME = 'Jishnu Raj';
-export const SITE_NAME_MULTILINE = ['Jishnu', 'Raj'];
 export const SITE_NAME = 'ACME Conf';
 export const META_DESCRIPTION = 'Jishnu Raj Developer Portfolio';
 export const SITE_DESCRIPTION = 'Jishnu Raj | Portfolio';

@@ -27,7 +27,7 @@ import TicketInfo from './ticket-info';
 type Props = {
   size?: number;
   name?: string;
-  ticketNumber?: number;
+  ticketNumber?: string;
   username?: string;
   ticketGenerationState?: TicketGenerationState;
 };
@@ -36,7 +36,7 @@ export default function TicketVisual({
   size = 1,
   name,
   username,
-  ticketNumber = 7025584800,
+  ticketNumber = '7025584831',
   ticketGenerationState = 'default'
 }: Props) {
   return (
