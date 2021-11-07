@@ -24,10 +24,10 @@ export default function Experience() {
   const companyList=[
     { 
       id: 1,
-      name: 'Web Developer',
+      name: 'Front-end Developer',
       shortName: 'GI',
       company: 'Global Invisions | Kochi',
-      bio: 'As a web developer, My major responsibilities at GI were to develop user-facing pages and User Interface components. Also to Make the user experience better, and occasionally some backend works with PHP and Laravel.',
+      bio: 'As a front-end developer, my major responsibilities at GI were to develop web pages, and development using Javascript. Working experince with Node Js, Vue Js and Laravel.',
       companyImage: 'https://www.giconsulting.com/assets/c93c07-d7ed2d1b6fb4cbeac1f544e27f3468db4c165056190a6552024b3b892a81abeb.jpg'
     },
     { 
