@@ -27,7 +27,7 @@ export default function Experience() {
       name: 'Front-end Developer',
       shortName: 'GI',
       company: 'Global Invisions | Kochi',
-      bio: 'As a front-end developer, my major responsibilities at GI were to develop web pages, and development using Javascript. Working experince with Node Js, Vue Js and Laravel.',
+      bio: 'As a front-end developer, my major responsibilities at GI were to develop web pages, and development using Javascript. Working experince with Node Js framework Vue Js and PHP framework Laravel.',
       companyImage: 'https://www.giconsulting.com/assets/c93c07-d7ed2d1b6fb4cbeac1f544e27f3468db4c165056190a6552024b3b892a81abeb.jpg'
     },
     { 
