@@ -69,14 +69,14 @@ export default function TicketActions({ username }: Props) {
       >
         <IconGithubJis width={24} /> GitHub Profile
       </a>
-      <a
+      {/* <a
         className={cn(styles.button, styleUtils.appear, styles.first, 'icon-button')}
         href={instagramUrl}
         rel="noopener noreferrer"
         target="_blank"
       >
         <IconInstagram width={24} /> Instagram Profile
-      </a>
+      </a> */}
       <a
         className={cn(styles.button, styleUtils.appear, styles.third, 'icon-button', {
           [styles.loading]: loading
