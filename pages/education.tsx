@@ -14,17 +14,26 @@
  * limitations under the License.
  */
 
-type Props = {
-  number: number;
-};
+import Page from '@components/page';
+import Education from '@components/school';
+import Layout from '@components/layout';
+import Header from '@components/header';
+import styles from '@components/schedule.module.css';
 
-export default function TicketNumber({ number }: Props) {
-  // const numDigits = `${number}`.length;
-  // const prefix = `000000`.slice(numDigits);
+export default function SchedulePage() {
+  const meta = {
+    title: 'Jishnu Raj | Education',
+    description: null
+  };
+
   return (
-    <>
-      {/* № {prefix} */}
-      {number}
-    </>
+    <Page meta={meta}>
+      <Layout>
+        <div className={styles.schoolrow}>
+        <Header hero="EDUCATION" description={`I keep learning each day and it never stops. But here is my academic career.`} />
+        <Education />
+        </div>
+      </Layout>
+    </Page>
   );
 }

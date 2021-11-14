@@ -49,7 +49,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
       Tilt.init(ticketRef.current, {
         glare: true,
         max: 5,
-        'max-glare': 0.50,
+        'max-glare': 0.42,
         'full-page-listening': true
       });
     }
@@ -78,7 +78,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               )
             ) : (
               <>
-                You're in. <br /> Make it unique.
+                {`I'm a`} <br /> {`Web Dev,`} <br /> {`and also a`} <br /> {`Self-taught`} <br />{'Digital artist'}
               </>
             )}
           </h2>
@@ -89,8 +89,7 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               </>
             ) : (
               <>
-                Generate a unique ticket image with <br className={styleUtils['hide-on-mobile']} />
-                your GitHub profile.
+                {/* Basically a techy by day and an artist by night */}
               </>
             )}
           </p>
@@ -130,7 +129,15 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
                 </div>
               </div>
             ) : (
-              <div className={styles['ticket-actions-placeholder']} />
+              <div>
+                <div className={styles['ticket-actions']}>
+                  <TicketActions username={'Jishnu Dev'} />
+                </div>
+                <div className={styles['ticket-copy']}>
+                  <TicketCopy username={'Jishnu Dev'} />
+                </div>
+              </div>
+              // <div className={styles['ticket-actions-placeholder']} />
             )}
           </>
         )}

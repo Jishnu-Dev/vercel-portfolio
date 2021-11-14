@@ -17,7 +17,7 @@
 import { TicketGenerationState } from '@lib/constants';
 import GithubIcon from '@components/icons/icon-github';
 import cn from 'classnames';
-import IconAvatar from './icons/icon-avatar';
+// import IconAvatar from './icons/icon-avatar';
 import styles from './ticket-profile.module.css';
 
 type Props = {
@@ -38,9 +38,7 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
         {username ? (
           <img src={`https://github.com/${username}.png`} alt={username} className={styles.image} />
         ) : (
-          <span className={cn(styles.image, styles['empty-icon'])}>
-            <IconAvatar />
-          </span>
+          <img src={`https://github.com/Jishnu-Dev.png`} alt={username} className={styles.image} />
         )}
       </span>
       <div className={styles.text}>
@@ -54,7 +52,7 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
               [styles.show]: ticketGenerationState === 'loading'
             })}
           >
-            {name || username || 'Your Name'}
+            {name || username || 'Jishnu Raj'}
           </span>
         </p>
         <p className={styles.username}>
@@ -66,7 +64,7 @@ export default function TicketProfile({ name, username, size = 1, ticketGenerati
             <span className={styles.githubIcon}>
               <GithubIcon color="var(--secondary-color)" size={20 * size} />
             </span>
-            {username || <>username</>}
+            {username || <>Jishnu-Dev</>}
           </span>
         </p>
       </div>

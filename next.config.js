@@ -17,6 +17,8 @@
 module.exports = {
   images: {
     domains: [
+      'www.giconsulting.com',
+      'images.unsplash.com',
       'www.datocms-assets.com',
       'a.storyblok.com',
       'images.ctfassets.net',

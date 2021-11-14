@@ -4,7 +4,7 @@
   "private": true,
   "repository": "vercel/virtual-event-starter-kit",
   "author": "Vercel Inc.",
-  "homepage": "https://demo.vercel.events",
+  "homepage": "https://jishnu-raj-portfolio.vercel.app/",
   "license": "Apache-2.0",
   "engines": {
     "node": "12.x"

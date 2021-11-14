@@ -115,3 +115,18 @@
   display: flex;
   width: 40px;
 }
+
+.heroLogo {
+  display: none;
+  color: #FFF;
+}
+
+.heroLogo:hover {
+  color: var(--brand);
+}
+
+@media(min-width: 1030px) {
+  .heroLogo{
+    display: block;
+  }
+}

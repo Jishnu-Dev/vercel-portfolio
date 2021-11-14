@@ -23,16 +23,16 @@
   display: none;
 }
 
-.row-wrapper {
+/* .row-wrapper {
   display: inline-block;
-}
+} */
 
 .row {
   display: flex;
   flex-direction: column;
   margin: 0 24px;
-  padding: var(--space-8x) 0 0;
-  border-bottom: 1px solid var(--accents-7);
+  padding: var(--space-8x) 0;
+  border-top: 1px solid var(--accents-7);
   width: 100%;
 }
 
@@ -44,7 +44,7 @@
   font-weight: 800;
   min-width: 220px;
   padding-bottom: var(--space-2x);
-  position: absolute;
+  position: relative;
   left: initial;
   color: var(--brand);
 }
@@ -68,8 +68,8 @@
 
   .row {
     margin: 0 var(--space-8x) 0 0;
-    flex-direction: row;
-    padding: var(--space-8x) 0;
+    flex-direction: column;
+    padding: var(--space-8x);
   }
 
   .talks {
@@ -81,7 +81,18 @@
     font-size: var(--space-8x);
     position: sticky;
     left: 0;
-    padding-left: var(--space-8x);
+    /* padding-left: var(--space-8x); */
     z-index: 1;
+  }
+}
+
+/* These styles below are by me Jishnu Raj */
+.schoolrow {
+  width: 100vw;
+}
+@media (min-width: 500px) {
+  .schoolrow {
+    width: 60vw;
+    margin: 0 auto;
   }
 }

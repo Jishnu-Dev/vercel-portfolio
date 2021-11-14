@@ -16,13 +16,17 @@
 
 import { useState, useRef, useEffect } from 'react';
 import cn from 'classnames';
-import { SITE_URL, TWEET_TEXT } from '@lib/constants';
-import IconTwitter from './icons/icon-twitter';
-import IconLinkedin from './icons/icon-linkedin';
+// import { SITE_URL, TWEET_TEXT } from '@lib/constants';
+// import IconTwitter from './icons/icon-twitter';
+import IconInstagram from './icons/icon-instagram';
+import IconGithubJis from './icons/icon-github-jis';
+import IconBlog from './icons/icon-blog';
+// import IconLinkedin from './icons/icon-linkedin';
 import IconDownload from './icons/icon-download';
 import LoadingDots from './loading-dots';
 import styleUtils from './utils.module.css';
 import styles from './ticket-actions.module.css';
+// import GithubIcon from '@components/icons/icon-github';
 
 type Props = {
   username: string;
@@ -32,11 +36,12 @@ export default function TicketActions({ username }: Props) {
   const [imgReady, setImgReady] = useState(false);
   const [loading, setLoading] = useState(false);
   const downloadLink = useRef<HTMLAnchorElement>();
-  const permalink = encodeURIComponent(`${SITE_URL}/tickets/${username}`);
-  const text = encodeURIComponent(TWEET_TEXT);
-  const tweetUrl = `https://twitter.com/intent/tweet?url=${permalink}&via=vercel&text=${text}`;
-  const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${permalink}`;
+  // const permalink = encodeURIComponent(`${SITE_URL}/tickets/${username}`);
+  // const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${permalink}`;
   const downloadUrl = `/api/ticket-images/${username}`;
+  const instagramUrl = 'https://www.instagram.com/plutokyd/';
+  const gitHubUrl = 'https://github.com/Jishnu-Dev'
+  const blogUrl = 'https://boringblog.hashnode.dev/dev-jishnu-my-favourite-vs-code-dark-themes'
 
   useEffect(() => {
     setImgReady(false);
@@ -58,47 +63,33 @@ export default function TicketActions({ username }: Props) {
     <>
       <a
         className={cn(styles.button, styleUtils.appear, styles.first, 'icon-button')}
-        href={tweetUrl}
+        href={gitHubUrl}
         rel="noopener noreferrer"
         target="_blank"
       >
-        <IconTwitter width={24} /> Tweet it!
+        <IconGithubJis width={24} /> GitHub Profile
       </a>
       <a
-        className={cn(
-          styles.button,
-          styleUtils.appear,
-          styles.second,
-          'icon-button',
-          // LinkedIn Share widget doesn’t work on mobile
-          styles['linkedin-button']
-        )}
-        href={linkedInUrl}
+        className={cn(styles.button, styleUtils.appear, styles.first, 'icon-button')}
+        href={instagramUrl}
         rel="noopener noreferrer"
         target="_blank"
       >
-        <IconLinkedin width={20} /> Share on LinkedIn
+        <IconInstagram width={24} /> Instagram Profile
       </a>
       <a
         className={cn(styles.button, styleUtils.appear, styles.third, 'icon-button', {
           [styles.loading]: loading
         })}
-        href={loading ? undefined : downloadUrl}
-        onClick={e => {
-          if (imgReady) return;
-
-          e.preventDefault();
-          downloadLink.current = e.currentTarget;
-          // Wait for the image download to finish
-          setLoading(true);
-        }}
+        href={loading ? undefined : blogUrl}
+        target={'_blank'}
         download="ticket.png"
       >
         {loading ? (
           <LoadingDots size={4} />
         ) : (
           <>
-            <IconDownload width={24} /> Download
+            <IconBlog width={24} /> Read My Blog
           </>
         )}
       </a>
