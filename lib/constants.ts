@@ -40,10 +40,10 @@ export const NAVIGATION = [
     name: 'Home',
     route: '/'
   },
-  {
-    name: 'Career',
-    route: '/experiences'
-  },
+  // {
+  //   name: 'Career',
+  //   route: '/experiences'
+  // },
   {
     name: 'Projects',
     route: '/hobbies'
