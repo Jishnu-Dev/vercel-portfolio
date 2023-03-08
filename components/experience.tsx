@@ -14,94 +14,81 @@
  * limitations under the License.
  */
 
+import Link from 'next/link';
 import Image from 'next/image';
 import cn from 'classnames';
 import styles from './speaker-section.module.css';
 
 export default function Experience() {
-  const companyList = [
-    {
+
+  const companyList=[
+    { 
       id: 1,
       name: 'Front-end Developer',
       shortName: 'GI',
       company: 'Global Invisions | Kochi',
-      bio:
-        'As a front-end developer, my major responsibilities at GI were to develop web pages, and development using Javascript. Working experince with Node Js framework Vue Js and PHP framework Laravel.',
-      companyImage:
-        'https://www.giconsulting.com/assets/c93c07-d7ed2d1b6fb4cbeac1f544e27f3468db4c165056190a6552024b3b892a81abeb.jpg'
+      bio: 'As a front-end developer, my major responsibilities at GI were to develop web pages, and development using Javascript. Working experince with Node Js framework Vue Js and PHP framework Laravel.',
+      companyImage: 'https://www.giconsulting.com/assets/c93c07-d7ed2d1b6fb4cbeac1f544e27f3468db4c165056190a6552024b3b892a81abeb.jpg'
     },
-    {
-      id: 2,
-      name: 'React JS Developer',
-      shortName: 'Lightrains',
-      company: 'Lightrains Technolabs | Technopark, Trivandrum',
-      bio:
-        'Being a React JS developer at Lightrains, I have been part of many blockchain related projects and, Developed an NFT marketplace with more than 50k monthly active users. Ensured project code-base is clean, robust and scalable. Been part of different kinds of NFT projects. Developed both admin side web apps and end user web apps. Interacted with clients to make both user experience and user interface exceptional.',
-      companyImage:
-        'https://www.giconsulting.com/assets/c93c07-d7ed2d1b6fb4cbeac1f544e27f3468db4c165056190a6552024b3b892a81abeb.jpg'
-    },
-    {
+    { 
       id: 2,
       name: 'Intern',
       shortName: 'Terasoft',
       company: 'Terasoft | Thodupuzha',
-      bio:
-        'As an intern, I started my career as a developer at Terasoft with a four-month internship right after my graduation.',
-      companyImage:
-        'https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2340&q=80'
+      bio: 'As an intern, I started my career as a developer at Terasoft with a four-month internship right after my graduation.',
+      companyImage: 'https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2340&q=80'
     }
-  ];
+  ]
 
   return (
     <>
       {companyList.map(company => (
         <div key={company.name} className={styles.experienceDiv}>
           <div className={styles.container}>
-            <div className={styles['hover-zoom']} style={{ minWidth: '300px' }}>
-              <Image
-                alt={company.name}
-                title={company.name}
-                src={company.companyImage}
-                className={styles.image}
-                loading="lazy"
-                height={400}
-                width={400}
-              />
-            </div>
-            <div className={styles['speaker-details']}>
-              <div>
-                <h1 className={styles.name} style={{ color: 'var(--brand)' }}>
-                  {company.name}
-                </h1>
-                <p className={styles.title}>
-                  {/* {`${company.title} @ `} */}@
-                  <span className={styles.company}>{` ${company.company}`}</span>
-                </p>
-                <h2 className={styles['bio-header']}>About</h2>
-                <p className={styles.bio}>{company.bio}</p>
-                <h3 className={styles['socials-header']}>Tech stack used at {company.shortName}</h3>
+          <div className={styles['hover-zoom']} style={{ minWidth: '300px' }}>
+            <Image
+            alt={company.name}
+            title={company.name}
+            src={company.companyImage}
+            className={styles.image}
+            loading="lazy"
+            height={400}
+            width={400}
+            /> 
+          </div>
+          <div className={styles['speaker-details']}>
+            <div>
+              <h1 className={styles.name} style={{color: 'var(--brand)'}}>{company.name}</h1>
+              <p className={styles.title}>
+                {/* {`${company.title} @ `} */}
+                @
+                <span className={styles.company}>{ ` ${company.company}`}</span>
+              </p>
+              <h2 className={styles['bio-header']}>About</h2>
+              <p className={styles.bio}>{company.bio}</p>
+              <h3 className={styles['socials-header']}>Tech stack used at {company.shortName}</h3>
 
-                {company.shortName == 'GI' ? (
-                  <div className={styles.techStackIcons}>
-                    <img src="https://img.icons8.com/ios-filled/50/ffffff/mac-os.png" />
-                    <img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png" />
-                    <img src="https://img.icons8.com/color/48/000000/gitlab.png" />
-                    <img src="https://img.icons8.com/color/48/000000/vue-js.png" />
-                    <img src="https://img.icons8.com/color/48/000000/npm.png" />
-                    <img src="https://img.icons8.com/color/48/000000/bootstrap.png" />
-                    <img src="https://img.icons8.com/color/48/000000/sass.png" />
-                  </div>
-                ) : company.shortName == 'Terasoft' ? (
-                  <div className={styles.techStackIcons}>
-                    <img src="https://img.icons8.com/color/48/000000/html-5.png" />
-                    <img src="https://img.icons8.com/officel/48/000000/asp.png" />
-                  </div>
-                ) : null}
-              </div>
+              { company.shortName == 'GI' ?
+                <div className={styles.techStackIcons}>
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/mac-os.png"/>
+                    <img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png"/>
+                    <img src="https://img.icons8.com/color/48/000000/gitlab.png"/>
+                    <img src="https://img.icons8.com/color/48/000000/vue-js.png"/>
+                    <img src="https://img.icons8.com/color/48/000000/npm.png"/>
+                    <img src="https://img.icons8.com/color/48/000000/bootstrap.png"/>
+                  <img src="https://img.icons8.com/color/48/000000/sass.png"/>
+                </div> : company.shortName == 'Terasoft' ? 
+                <div className={styles.techStackIcons}>
+                    <img src="https://img.icons8.com/color/48/000000/html-5.png"/>
+                    <img src="https://img.icons8.com/officel/48/000000/asp.png"/>
+                </div> : null
+              }
+
             </div>
           </div>
-
-          {/* <div className={styles['talk-details']}>
+        </div>
+      
+        {/* <div className={styles['talk-details']}>
           <h3 className={styles['socials-header']}>{'sdfsdfsd'}</h3>
           <p>{'company.talk.description'}</p>
         </div> */}
