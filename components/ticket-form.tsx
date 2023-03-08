@@ -14,18 +14,19 @@
  * limitations under the License.
  */
 
-import { useState, useRef } from 'react';
-// import { scrollTo } from '@lib/smooth-scroll';
-import cn from 'classnames';
 import { REPO, SITE_ORIGIN, TicketGenerationState } from '@lib/constants';
-// import isMobileOrTablet from '@lib/is-mobile-or-tablet';
-import useConfData from '@lib/hooks/use-conf-data';
-import LoadingDots from './loading-dots';
-import formStyles from './form.module.css';
-import ticketFormStyles from './ticket-form.module.css';
-import { saveGithubToken } from '@lib/user-api';
+import { useRef, useState } from 'react';
+
 import { GitHubOAuthData } from '@lib/types';
 import IconDownload from './icons/icon-download';
+import LoadingDots from './loading-dots';
+// import { scrollTo } from '@lib/smooth-scroll';
+import cn from 'classnames';
+import formStyles from './form.module.css';
+import { saveGithubToken } from '@lib/user-api';
+import ticketFormStyles from './ticket-form.module.css';
+// import isMobileOrTablet from '@lib/is-mobile-or-tablet';
+import useConfData from '@lib/hooks/use-conf-data';
 
 type FormState = 'default' | 'loading' | 'error';
 
@@ -162,9 +163,7 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
       }}
     >
       <div className={cn(formStyles['form-row'], ticketFormStyles['form-row'])}>
-        <a 
-          href={'https://github.com/Jishnu-Dev/ABOUT-ME/blob/main/Jishnu%20Raj%20CV.pdf'}
-          target="_blank">
+        <a href="/Jishnu-Raj-CV.pdf" target="_blank">
           <button
             type="button"
             className={cn(
@@ -191,11 +190,7 @@ export default function Form({ defaultUsername = '', setTicketGenerationState }:
                 {/* <GithubIcon color="#fff" size={24} /> */}
                 <IconDownload width={24} />
               </span>
-              {formState === 'loading' ? (
-                <LoadingDots size={4} />
-              ) : (
-                username || 'Download Resume'
-              )}
+              {formState === 'loading' ? <LoadingDots size={4} /> : username || 'Download Resume'}
             </div>
           </button>
         </a>
